@@ -5,8 +5,8 @@ const path_1 = require("path");
 const app_module_1 = require("./app.module");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
-    app.useStaticAssets((0, path_1.join)(__dirname, '..', 'src/public'));
-    app.setBaseViewsDir((0, path_1.join)(__dirname, '..', 'src/views'));
+    app.useStaticAssets((0, path_1.join)(__dirname, '..', '/public'));
+    app.setBaseViewsDir((0, path_1.join)(__dirname, '..', '/views'));
     app.setViewEngine('hbs');
     await app.listen(process.env.PORT || '80');
 }
